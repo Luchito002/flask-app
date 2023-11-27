@@ -1,11 +1,9 @@
 from flask import Flask, jsonify
-from flask_cors import CORS 
 from Nodo import get_siguiente_movimiento
 
 import os
 
 app = Flask(__name__)
-CORS(app)
 
 @app.route('/api/tree', methods=['POST'])
 def get_tree_result():
